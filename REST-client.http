@@ -1,0 +1,54 @@
+GET https://postman-echo.com/get
+    ?foo1=bar1
+    &foo2=bar2
+my-sample-header:Lorem ipsum dolor sit amet2
+my-dynamic-header:Lorem iasdfa it 
+
+###
+GET https://postman-echo.com/headers
+my-sample-header:Lorem ipsum dolor sit amet2
+my-dynamic-header:Lorem iasdfa it 
+
+###
+POST https://postman-echo.com/post HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+name=foo
+&password=bar
+
+###
+POST https://postman-echo.com/post HTTP/1.1
+Content-Type: application/txt
+
+< ./demo.txt
+
+
+###
+POST https://postman-echo.com/post HTTP/1.1
+Content-Type: text/plain
+
+this is hapennig 
+
+###
+POST https://postman-echo.com/post HTTP/1.1
+content-type: application/json
+
+{
+    "name": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+###
+curl --request POST \
+  --url https://postman-echo.com/post \
+  --header 'content-type: application/json' \
+  --header 'user-agent: vscode-restclient' \
+  --data '{"name": "sample","time": "Wed, 21 Oct 2015 18:27:50 GMT"}'
+
+###
+GET https://httpbin.org/basic-auth/user/passwd HTTP/1.1
+Authorization: Basic user:passwd
+
+###
+GET https://postman-echo.com/basic-auth HTTP/1.1
+Authorization: Basic postman:password

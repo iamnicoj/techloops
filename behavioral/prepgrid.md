@@ -1,8 +1,4 @@
 # Behavioral prep
-
-
-
-
 |Question|asdf|fdsa|fdsa|fdss|asdf|
 |---|----|----|---|---|---|
 |Challanges|asdfsad|asdfasf|fasd|fasdf|asdffsd|
